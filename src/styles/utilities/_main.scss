@@ -1,0 +1,13 @@
+@use "../theme" as *;
+
+main {
+    max-width: 40rem;
+    width: 100%;
+    margin-top: 5rem;
+    .obs{
+        text-align: center;
+        @include themify($themes){
+            color: themed("faded-text-color");
+        }
+    }
+}

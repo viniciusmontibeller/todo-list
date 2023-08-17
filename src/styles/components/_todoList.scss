@@ -1,0 +1,18 @@
+@use "../abstracts/" as *;
+@use "../theme/" as *;
+
+.todo-list{
+    @include themify($themes){
+        background: themed("list-background");
+    }
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 4rem;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    .todo{
+        @include themify($themes){
+            border-bottom: 1px solid themed("border-color")
+        }
+    }
+}

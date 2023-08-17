@@ -1,0 +1,19 @@
+@use '../theme/' as *;
+
+.app-wrapper{
+    min-height: 100vh;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    @include themify($themes){
+        background: themed("background");
+        background-image: themed("background-image");
+        color: themed("text-color");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+}

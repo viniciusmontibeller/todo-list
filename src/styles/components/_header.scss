@@ -1,0 +1,17 @@
+@use "../theme" as *;
+@use "../abstracts" as *; 
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    color: $very-light-gray;
+    button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    h1{
+        letter-spacing: 1rem;
+    }
+}

@@ -1,0 +1,51 @@
+@use "../abstracts" as *;
+
+$themes: (
+    light: (
+        background: $very-light-gray,
+        text-color: $very-dark-blue,
+        list-background: $very-light-gray,
+        background-image: $desktop-light-bg,
+        faded-text-color: $dark-grayish-blue,
+        completed-text-color: $light-grayish-blue,
+        border-color: $light-grayish-blue,
+    ),
+    dark: (
+        background: $very-dark-blue,
+        text-color: $very-light-grayish-blue,
+        list-background: $very-dark-desaturated-blue,
+        background-image: $desktop-dark-bg,
+        faded-text-color: $dark-grayish-blue,
+        completed-text-color: $dark-grayish-blue,
+        border-color: $very-dark-grayish-blue,
+    )
+);
+
+@mixin themify($themes) {
+    @each $theme, $map in $themes {
+      .theme-#{$theme} & {
+        $theme-map: () !global;
+        @each $key, $submap in $map {
+          $value: map-get(map-get($themes, $theme), '#{$key}');
+          $theme-map: map-merge($theme-map, ($key: $value)) !global;
+        }
+        @content;
+        $theme-map: null !global;
+      }
+    }
+  }
+
+@function themed($key){
+    @return map-get($theme-map, $key)
+};
+
+// @mixin background($themes){
+//       @each $theme-name, $sub-map in $themes{
+//           .theme-#{$theme-name}{
+//               $theme-map: $sub-map;
+//               @each $key, $value in $sub-map{
+//                 #{$key}: $value;
+//               }
+//           }
+//       }
+//   };

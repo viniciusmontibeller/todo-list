@@ -1,0 +1,90 @@
+@use "../abstracts" as *;
+@use "../theme/" as *;
+
+.todo {
+    @include themify($themes){
+        background-color: themed("list-background");
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    &:hover{
+        .close-btn{
+            // display: flex;
+            opacity: 1;
+        }
+    }
+    .input{
+        border: none;
+        font-family: $primary-font;
+        outline: none;
+        flex-grow: 1;
+        font-size: $font-size;
+        cursor: pointer;
+        @include themify($themes){
+            background-color: themed("list-background");
+            color: themed("text-color")
+        }
+        &:disabled{
+            background-color: $very-light-gray;
+            color: $very-dark-blue;
+        }
+        &.completed{
+            text-decoration: line-through;
+            @include themify($themes){
+                color: themed("completed-text-color")
+            }
+        }
+        
+    }
+    .check{
+        margin: 1.5rem;
+    }
+    .close-btn {
+        margin: 1.5rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        opacity: 0;
+    }
+    .submit-btn{
+        margin: 1.5rem;
+    }
+    .check, .submit-btn{
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        background-color: transparent;
+        cursor: pointer;
+        @include themify($themes) {
+            border: 1px solid themed("border-color");
+        }
+        &:hover{
+            @include themify($themes){
+                background: linear-gradient(themed("list-background"), themed("list-background")) padding-box,
+                $check-background border-box;
+                border: 1px solid transparent;
+            }
+        }
+        &.completed{
+            background: $check-background;
+            background: $check-background padding-box,
+            $check-background border-box;
+            border: 1px solid transparent;
+            &:hover{
+                @include themify($themes){
+                    background: $check-background;
+                    background: $check-background padding-box,
+                    $check-background border-box;
+                    border: 1px solid transparent;
+                }
+            }
+        }
+    }
+}
+
+.new.todo{
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

@@ -1,0 +1,29 @@
+@use "../abstracts/" as *;
+@use "../theme/" as *;
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    @include themify($themes){
+        color: themed("faded-text-color");
+    }
+    .todos-state {
+        display: flex;
+        gap: 1rem;
+    }
+    .list-filter{
+        &.active{
+            color: $bright-blue;
+        }
+    }
+    p{
+        cursor: pointer;
+        transition: .2s ease-in-out;
+        &:hover{
+            @include themify($themes){
+                color: themed("text-color");
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+@use "../theme" as *;
+
+body {
+    // background-image: url("../../../public/images/bg-desktop-light.jpg");
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // min-height: 100vh;
+    font-family: $primary-font;
+    font-size: $font-size;
+    #root{
+        min-height: 100vh;
+    }
+}
