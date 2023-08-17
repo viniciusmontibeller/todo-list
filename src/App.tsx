@@ -6,7 +6,7 @@ import { Header } from "./components/Header"
 import { ThemeContext } from "./context/ThemeContext"
 import './styles/main.scss'
 
-import { ITodo } from "./interfaces"
+import { ITodo } from "./types"
 
 type AppContentProps = {
   children: React.ReactNode;

@@ -1,9 +1,4 @@
-type TodoFooterProps ={
-    todosLenght: number;
-    filterType: string;
-    setFilterType: React.Dispatch<React.SetStateAction<string>>;
-    handleRevomeCompletedTodos: () => void;
-}
+import { TodoFooterProps } from "../../types"
 
 const TodoFooter = ({ todosLenght, filterType, setFilterType, handleRevomeCompletedTodos }:  TodoFooterProps) => {
     return (

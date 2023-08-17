@@ -1,10 +1,8 @@
 import Close from "../../assets/icon-cross.svg"
 import Check from "../../assets/icon-check.svg"
-import { ITodoItem } from "../../interfaces"
-// import { useState } from "react"
+import { ITodoItem } from "../../types"
 
 const Todo = ({ todo, handleRemoveTodo, handleUpdateTodo, handleCompleteTodo }: ITodoItem) => {
-    // const [editable, setEditable] = useState(true)
 
     return (
         <>

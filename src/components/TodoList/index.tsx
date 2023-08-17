@@ -1,6 +1,6 @@
 import { Todo } from "../Todo"
 import { TodoFooter } from "../TodoFooter";
-import { ITodoList, ITodo } from "../../interfaces";
+import { ITodoList, ITodo } from "../../types";
 import { useRef, useState } from "react";
 
 

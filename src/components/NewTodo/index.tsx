@@ -1,6 +1,6 @@
 // import Check from "../../assets/icon-check.svg"
 import { useState } from "react"
-import { ITodo, ITodoForm } from "../../interfaces"
+import { ITodo, ITodoForm } from "../../types"
 
 const NewTodo = ({ handleCreateTodo }: ITodoForm) => {
     const [input, setInput] = useState("")
