@@ -1,13 +1,15 @@
 @use "../theme" as *;
+@use "../abstracts/" as *;
 
 main {
-    max-width: 40rem;
+    max-width: 35rem;
     width: 100%;
     margin-top: 5rem;
     .obs{
         text-align: center;
+        font-size: $font-size * .85;
         @include themify($themes){
-            color: themed("faded-text-color");
+            color: themed("obs-text");
         }
     }
 }

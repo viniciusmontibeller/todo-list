@@ -3,21 +3,25 @@
 $themes: (
     light: (
         background: $very-light-gray,
-        text-color: $very-dark-blue,
+        text-color: $very-dark-grayish-blue,
         list-background: $very-light-gray,
         background-image: $desktop-light-bg,
         faded-text-color: $dark-grayish-blue,
-        completed-text-color: $light-grayish-blue,
-        border-color: $light-grayish-blue,
+        completed-text-color: $lighter-grayish-blue,
+        border-color: $lighter-grayish-blue,
+        text-hover: $very-dark-grayish-blue,
+        obs-text: $dark-grayish-blue,
     ),
     dark: (
         background: $very-dark-blue,
-        text-color: $very-light-grayish-blue,
+        text-color: $light-grayish-blue,
         list-background: $very-dark-desaturated-blue,
         background-image: $desktop-dark-bg,
-        faded-text-color: $dark-grayish-blue,
-        completed-text-color: $dark-grayish-blue,
-        border-color: $very-dark-grayish-blue,
+        faded-text-color: $darker-grayish-blue,
+        completed-text-color: $very-dark-gray-blue,
+        border-color: $very-dark-gray-blue2,
+        text-hover: $light-grayish-blue-hover,
+        obs-text: $very-dark-gray-blue,
     )
 );
 
@@ -38,14 +42,3 @@ $themes: (
 @function themed($key){
     @return map-get($theme-map, $key)
 };
-
-// @mixin background($themes){
-//       @each $theme-name, $sub-map in $themes{
-//           .theme-#{$theme-name}{
-//               $theme-map: $sub-map;
-//               @each $key, $value in $sub-map{
-//                 #{$key}: $value;
-//               }
-//           }
-//       }
-//   };

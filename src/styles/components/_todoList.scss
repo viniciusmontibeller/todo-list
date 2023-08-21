@@ -5,11 +5,11 @@
     @include themify($themes){
         background: themed("list-background");
     }
-    border-radius: 8px;
+    border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-top: 4rem;
+    margin-top: 2rem;
     overflow: hidden;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     .todo{
         @include themify($themes){
             border-bottom: 1px solid themed("border-color")

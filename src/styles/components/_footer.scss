@@ -4,13 +4,15 @@
 .footer {
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
+    font-size: $font-size * .85;
     @include themify($themes){
         color: themed("faded-text-color");
     }
     .todos-state {
         display: flex;
-        gap: 1rem;
+        gap: 1.3rem;
+        font-weight: 600;
     }
     .list-filter{
         &.active{
@@ -22,7 +24,7 @@
         transition: .2s ease-in-out;
         &:hover{
             @include themify($themes){
-                color: themed("text-color");
+                color: themed("text-hover");
             }
         }
     }
