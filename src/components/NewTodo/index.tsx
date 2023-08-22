@@ -2,9 +2,9 @@
 import { useState } from "react"
 import { ITodo, ITodoForm } from "../../types"
 
-const NewTodo = ({ handleCreateTodo }: ITodoForm) => {
+const NewTodo = ({ handleCreateTodo, todos }: ITodoForm) => {
     const [input, setInput] = useState("")
-    const [id, setId] = useState(Math.random() * 1000)
+    const [id, setId] = useState(() => generateNewId())
 
     const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -13,9 +13,18 @@ const NewTodo = ({ handleCreateTodo }: ITodoForm) => {
             id: id,
             isCompleted: false,
         }
-        setId(Math.random() * 1000)
+        setId(generateNewId())
         handleCreateTodo(newTodo);
         setInput("")
+    }
+
+    function generateNewId (){
+        let newId = Math.random() * 1000;
+        const todosIdList = todos.map((todo) => todo.id)
+        if(todosIdList.includes(newId)){
+            return newId = Math.random() * 1000;
+        }
+        return newId
     }
 
     return (
