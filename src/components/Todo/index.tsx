@@ -1,5 +1,5 @@
-import Close from "../../assets/icon-cross.svg"
-import Check from "../../assets/icon-check.svg"
+import { ReactComponent as Close } from "../../assets/icon-cross.svg"
+import { ReactComponent as Check } from "../../assets/icon-check.svg"
 import { ITodoItem } from "../../types"
 
 const Todo = ({ todo, handleRemoveTodo, handleUpdateTodo, handleCompleteTodo }: ITodoItem) => {
@@ -10,7 +10,7 @@ const Todo = ({ todo, handleRemoveTodo, handleUpdateTodo, handleCompleteTodo }: 
                 aria-label="Mark todo as completed"
                 className={`btn check ${todo.isCompleted ? "completed" : ""}`} 
                 onClick={() => handleCompleteTodo(todo.id)}>
-                {todo.isCompleted ? <img src={Check} alt="Check"/> : <span/>}
+                {todo.isCompleted ? <Check/> : <span/>}
             </button>
                 {/* <p 
                     className={`input ${todo.isCompleted ? "completed" : ""}`} 
@@ -25,7 +25,7 @@ const Todo = ({ todo, handleRemoveTodo, handleUpdateTodo, handleCompleteTodo }: 
                 aria-label="Delete todo"
                 className="close-btn" 
                 onClick={() => handleRemoveTodo(todo.id)}>
-                <img src={Close} alt="Close cross"/>
+                <Close />
             </button>
         </>
     )

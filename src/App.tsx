@@ -18,7 +18,7 @@ const AppContent = ({children}: AppContentProps) => {
 
   return(
     <div className={`theme-${theme} app-wrapper`}>
-      <div className="body">
+      <div className="artificial-body">
         <main>
           {children}
         </main>
@@ -81,14 +81,16 @@ function App() {
           <NewTodo
             todos={todos}
             handleCreateTodo={handleCreateTodo} />
-          <TodoList
+          <div className="list-container">
+            <TodoList
             todos={todos}
             setTodos={setTodos}
             handleCompleteTodo={handleCompleteTodo}
             handleRemoveTodo={handleRemoveTodo}
             handleUpdateTodo={handleUpdateTodo}
             />
-          <p className="obs">Drag and drop to reorder list</p>
+            <p className="obs">Drag and drop to reorder list</p>
+          </div>
       </AppContent>
     </ThemeProvider>
   )

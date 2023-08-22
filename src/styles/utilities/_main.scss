@@ -5,11 +5,16 @@ main {
     max-width: 35rem;
     width: 100%;
     margin-top: 5rem;
+    margin-inline: 1.5rem;
+    z-index: 1; 
     .obs{
         text-align: center;
         font-size: $font-size * .85;
         @include themify($themes){
             color: themed("obs-text");
         }
+    }
+    @include mobile{
+        margin-top: 3rem;
     }
 }

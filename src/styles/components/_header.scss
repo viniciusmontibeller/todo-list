@@ -14,4 +14,13 @@
     h1{
         letter-spacing: 1rem;
     }
+    @include mobile{
+        margin-bottom: 1.8rem;
+        h1{
+            font-size: $font-size * 1.7;
+        }
+        svg{
+            scale: 0.85;
+        }
+    }
 }

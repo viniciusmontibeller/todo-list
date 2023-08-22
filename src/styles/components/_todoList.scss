@@ -16,3 +16,10 @@
         }
     }
 }
+
+@include mobile{
+    .todo-list{
+        margin-top: 1.2rem;
+        margin-bottom: 7rem;
+    }
+} 

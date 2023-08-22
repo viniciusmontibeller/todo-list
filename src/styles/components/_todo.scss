@@ -8,11 +8,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     &:hover{
         .close-btn{
             opacity: 1;
         }
+    }
+    &.new{
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
     .input{
         border: none;
@@ -20,8 +23,8 @@
         outline: none;
         flex-grow: 1;
         font-size: $font-size;
+        caret-color: $bright-blue;
         cursor: pointer;
-
         @include themify($themes){
             background-color: themed("list-background");
             color: themed("text-color")
@@ -36,27 +39,19 @@
                 color: themed("completed-text-color")
             }
         }
-        
     }
-    .check{
+    button{
         margin: 1.3rem;
     }
     .close-btn {
-        margin: 1.3rem;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
+        @extend %default-button;
         opacity: 0;
-    }
-    .submit-btn{
-        margin: 1.3rem;
     }
     .check, .submit-btn{
         height: 1.5rem;
         width: 1.5rem;
         border-radius: 50%;
-        background-color: transparent;
-        cursor: pointer;
+        @extend %default-button;
         @include themify($themes) {
             border: 1px solid themed("border-color");
         }
@@ -84,10 +79,23 @@
     }
 }
 
-.new.todo{
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    input{
-        caret-color: $bright-blue;
+@include mobile {
+    .todo {
+        .input{
+            font-size: $font-size * 0.65;
+        }
+        button{
+            margin: 1rem;
+        }
+        .check, .submit-btn, .close-btn{
+            height: 1.2rem;
+            width: 1.2rem;
+        
+        }
+        .close-btn{
+            svg{
+                scale: .8;
+            }
+        }
     }
 }

@@ -1,5 +1,5 @@
-import Sun from "../../assets/icon-sun.svg"
-import Moon from "../../assets/icon-moon.svg"
+import { ReactComponent as Sun} from "../../assets/icon-sun.svg"
+import { ReactComponent as Moon} from "../../assets/icon-moon.svg"
 import { useContext } from "react"
 import { ThemeContext } from "../../context/ThemeContext"
 
@@ -12,7 +12,7 @@ const ToggleButton = () => {
             <button 
                 aria-label="Theme toggle button"
                 onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-                {theme === "light" ? <img src={Moon} alt="Moon"/> : <img src={Sun} alt="Sun"/>}
+                {theme === "light" ? <Moon/> : <Sun/>}
             </button>
         </>
     )

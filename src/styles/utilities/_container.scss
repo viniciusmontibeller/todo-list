@@ -1,19 +1,31 @@
 @use '../theme/' as *;
+@use '../abstracts/' as *;
 
 .app-wrapper{
     min-height: 100vh;
 }
 
-.body{
+.artificial-body{
     display: flex;
     justify-content: center;
     min-height: 100vh;
+    position: relative;
     @include themify($themes){
         background: themed("background");
         background-image: themed("background-image");
         color: themed("text-color");
         background-repeat: no-repeat;
-        background-size: contain;
+        background-attachment: fixed;
+        background-position: center top;
     }
-    
+    @include mobile{
+        @include themify($themes) {
+            background-image: themed("mobile-background-image");
+            background-size: contain;
+        }
+}
+}
+
+.list-container{
+    position: relative;
 }

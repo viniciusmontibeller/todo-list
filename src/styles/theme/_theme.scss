@@ -6,6 +6,7 @@ $themes: (
         text-color: $very-dark-grayish-blue,
         list-background: $very-light-gray,
         background-image: $desktop-light-bg,
+        mobile-background-image: $mobile-light-bg,
         faded-text-color: $dark-grayish-blue,
         completed-text-color: $lighter-grayish-blue,
         border-color: $lighter-grayish-blue,
@@ -17,6 +18,7 @@ $themes: (
         text-color: $light-grayish-blue,
         list-background: $very-dark-desaturated-blue,
         background-image: $desktop-dark-bg,
+        mobile-background-image: $mobile-dark-bg,
         faded-text-color: $darker-grayish-blue,
         completed-text-color: $very-dark-gray-blue,
         border-color: $very-dark-gray-blue2,
@@ -24,6 +26,7 @@ $themes: (
         obs-text: $very-dark-gray-blue,
     )
 );
+
 
 @mixin themify($themes) {
     @each $theme, $map in $themes {

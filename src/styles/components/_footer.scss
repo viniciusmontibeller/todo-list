@@ -4,7 +4,7 @@
 .footer {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 1.5rem;
+    padding: 1.3rem;
     font-size: $font-size * .85;
     @include themify($themes){
         color: themed("faded-text-color");
@@ -22,10 +22,8 @@
         }
     }
     button{
-        cursor: pointer;
+        @extend %default-button;
         transition: .2s ease-in-out;
-        background-color: transparent;
-        border: none;
         font-size: $font-size * .85;
         font-family: $primary-font;
         @include themify($themes){
@@ -35,6 +33,32 @@
             @include themify($themes){
                 color: themed("text-hover");
             }
+        }
+    }
+}
+@include mobile {
+    .footer{
+        padding: 1rem;
+        font-size: $font-size * 0.65;
+        .complete-btn{
+            font-size: $font-size * 0.65;
+        }
+    }
+    .todos-state{
+        position: absolute;
+        bottom: 3.8rem;
+        right: 0;
+        left: 0;
+        width: 100%;
+        justify-content: center;
+        padding-block: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        @include themify($themes){
+            background-color: themed("list-background");
+            border-radius: 5px;
+        }
+        button{
+            font-size: $font-size * 0.8;
         }
     }
 }

@@ -12,7 +12,9 @@ const TodoFooter = ({ todosLenght, filterType, setFilterType, handleRevomeComple
                 <button className={`list-filter ${filterType === "Completed" ? "active" : ""}`} 
                     onClick={() => setFilterType("Completed")}>Completed</button>
             </div>
-            <button onClick={handleRevomeCompletedTodos}>Clear Completed</button>
+            <button 
+                className="complete-btn"
+                onClick={handleRevomeCompletedTodos}>Clear Completed</button>
         </footer>
     )
 }
