@@ -29,14 +29,13 @@ const NewTodo = ({ handleCreateTodo, todos }: ITodoForm) => {
 
     return (
         <form className="new todo" onSubmit={submitHandler}>
-            <button className="submit-btn" type="submit">
-                {/* <img src={Check} /> */}
-            </button>
+            <button className="submit-btn" type="submit" />
             <input
             className="input"
             type="text" 
             placeholder="Create a new todo..."
             value={input}
+            aria-label="Create a new todo..."
             onChange={(e) => setInput(e.target.value)}
             />
         </form>

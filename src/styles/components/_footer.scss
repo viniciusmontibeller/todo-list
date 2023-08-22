@@ -12,16 +12,25 @@
     .todos-state {
         display: flex;
         gap: 1.3rem;
-        font-weight: 600;
+        button{
+            font-weight: bold;
+        }
     }
     .list-filter{
         &.active{
             color: $bright-blue;
         }
     }
-    p{
+    button{
         cursor: pointer;
         transition: .2s ease-in-out;
+        background-color: transparent;
+        border: none;
+        font-size: $font-size * .85;
+        font-family: $primary-font;
+        @include themify($themes){
+            color: themed("faded-text-color");
+        }
         &:hover{
             @include themify($themes){
                 color: themed("text-hover");

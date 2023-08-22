@@ -21,6 +21,7 @@
         flex-grow: 1;
         font-size: $font-size;
         cursor: pointer;
+
         @include themify($themes){
             background-color: themed("list-background");
             color: themed("text-color")

@@ -9,8 +9,10 @@ const ToggleButton = () => {
 
     return (
         <>
-            <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-                {theme === "light" ? <img src={Moon} /> : <img src={Sun}/>}
+            <button 
+                aria-label="Theme toggle button"
+                onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+                {theme === "light" ? <img src={Moon} alt="Moon"/> : <img src={Sun} alt="Sun"/>}
             </button>
         </>
     )
