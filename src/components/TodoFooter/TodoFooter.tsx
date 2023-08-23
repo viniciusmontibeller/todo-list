@@ -3,7 +3,7 @@ import { TodoFooterProps } from "../../types"
 const TodoFooter = ({ todosLenght, filterType, setFilterType, handleRevomeCompletedTodos }:  TodoFooterProps) => {
     return (
         <footer className="footer">
-            <p>{todosLenght} items left</p>
+            <p>{todosLenght} {todosLenght === 1 ? "item" : "items"} left</p>
             <div className="todos-state">
                 <button className={`list-filter ${filterType === "All" ? "active" : ""}`} 
                     onClick={() => setFilterType("All")}>All</button>

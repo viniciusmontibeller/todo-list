@@ -1,4 +1,3 @@
-// import Check from "../../assets/icon-check.svg"
 import { useState } from "react"
 import { ITodo, ITodoForm } from "../../types"
 

@@ -1,5 +1,5 @@
 import { Todo } from "../Todo"
-import { TodoFooter } from "../TodoFooter";
+import { TodoFooter } from "../TodoFooter/TodoFooter";
 import { ITodoList, ITodo } from "../../types";
 import { useRef, useState } from "react";
 
