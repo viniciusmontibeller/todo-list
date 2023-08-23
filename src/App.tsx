@@ -4,7 +4,7 @@ import { ThemeProvider } from "./context/ThemeContext"
 import { useState, useEffect, useContext } from "react"
 import { Header } from "./components/Header"
 import { ThemeContext } from "./context/ThemeContext"
-import './styles/main.scss'
+import './sass/main.scss'
 
 import { ITodo } from "./types"
 
