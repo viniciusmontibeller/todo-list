@@ -46,7 +46,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Live site at Vercel]()
+- Live Site URL: [Live site at Vercel](https://todo-list-two-rose.vercel.app/)
 
 ## My process
 
